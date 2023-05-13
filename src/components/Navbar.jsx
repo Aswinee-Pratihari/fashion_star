@@ -14,7 +14,7 @@ const Navbar = () => {
 
         <div className='container mx-auto  flex  items-center justify-between py-6 px-10'>
             <ul className="left flex gap-4">
-                <li>WOMEN</li>
+                <li><Link to="/products">Shop Now</Link></li>
                 <li>WOMEN</li>
                 <li>WOMEN</li>
 

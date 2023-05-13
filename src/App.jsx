@@ -11,6 +11,7 @@ import {
 } from "react-router-dom";
 import Home from './pages/Home';
 import Footer from './components/Footer';
+import AllProducts from './pages/AllProducts';
 function App() {
   const AppLayout=()=>{
     return(
@@ -32,7 +33,7 @@ function App() {
         },
         {
           path:"/products",
-          element:<Home/>
+          element:<AllProducts/>
         },
         {
           path:"/products/:catId",
