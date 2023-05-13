@@ -2,6 +2,7 @@ import React from 'react'
 import Slider from 'infinite-react-carousel';
 import {cards} from "../dummyData.js"
 import ProductCard from './ProductCard.jsx';
+<<<<<<< HEAD
 const ProductSlider = () => {
 
   return (
@@ -15,6 +16,14 @@ const ProductSlider = () => {
    {cards.map((card)=>(
       <ProductCard item={card} key={card.id}/>
    ))}
+=======
+const ProductSlider = ({children,slidesToShow,arrowsScroll,dotsScroll}) => {
+  return (
+    <>
+     <div className="container mx-auto">
+     <Slider dots slidesToShow={slidesToShow} arrowsScroll={arrowsScroll} dotsScroll={dotsScroll} >
+   {children}
+>>>>>>> Crousalslider
   </Slider>
      </div>
     </>
