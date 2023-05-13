@@ -46,18 +46,19 @@ function App() {
           element:<Home/>
         },
         {
-          path:"/login",
+          path:"/signIn",
           element:<Home/>
         },
-        {
-          path:"/products",
-          element:<Home/>
-        },  {
-          path: "/chats",
+          {
+          path: "/messages",
           element: <Home />,
         },
         {
-          path: "/chat/:id",
+          path: "/myOrders",
+          element: <Home />,
+        },
+        {
+          path: "/message/:id",
           element: <Home />,
         },
         {

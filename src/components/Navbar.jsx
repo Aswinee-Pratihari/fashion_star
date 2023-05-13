@@ -20,9 +20,11 @@ const Navbar = () => {
 
                 {/* <label for="google_translate_element">CSS</label> */}
             </ul>
+            <Link to="/">
             <h1 className="center text-3xl font-bold cursor-pointer">
                 FASHION FOR LIFE
             </h1>
+            </Link>
             <ul className="right flex gap-7 items-center font-semibold">
                
                 <li className='relative'>
@@ -34,14 +36,18 @@ const Navbar = () => {
                     <span className='bg-red-900 font-bold w-6 h-6 rounded-full flex justify-center items-center absolute  -top-3 -right-3 text-white'>0</span>
                 </li>
 
-                {!currentUser && (  <li>
+                {!currentUser && ( 
+                    <Link to="/register">
+                    <li>
                     Join
-                </li>)}
+                </li>
+                    </Link>
+                )}
               
                 
-                {!currentUser && ( <li className='border-2 border-black p-2 hover:bg-black hover:border-white hover:text-white cursor-pointer duration-300 ease-in-out'>
+                {!currentUser && ( <Link to="/signIn"> <li className='border-2 border-black p-2 hover:bg-black hover:border-white hover:text-white cursor-pointer duration-300 ease-in-out'>
                     Sign In
-                </li>)}
+                </li> </Link>)}
                     
                     {currentUser && (
                         <div className='relative '>
@@ -56,12 +62,22 @@ const Navbar = () => {
                             <div className="options absolute  top-14 right-2 w-[300px] bg-slate-400 p-3 rounded-sm space-y-4">
                                 {currentUser.isSeller && (
                                     <>
+                                    <Link to="/myProducts">
                                     <li className='hover:bg-slate-50 duration-200 ease-out rounded-md p-1'>My Products</li>
+                                    </Link>
+
+                                    <Link to="addProduct">
                                     <li className='hover:bg-slate-50 duration-200 ease-out rounded-md p-1'>Add New Products</li>
+                                    </Link>
                                     </>
                                 )}
+                                <Link to="/myOrders">
                                 <li className='hover:bg-slate-50 duration-200 ease-out rounded-md p-1'>My Orders</li>
+                                </Link>
+
+                                <Link to="/messages">
                                     <li className='hover:bg-slate-50 duration-200 ease-out rounded-md p-1'>My Messages</li>
+                                </Link>
                                     <li className='hover:bg-slate-50 duration-200 ease-out rounded-md p-1'>LogOut</li>
                             </div>
                             )}
