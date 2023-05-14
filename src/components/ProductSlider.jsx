@@ -1,7 +1,7 @@
 import React from 'react'
 import Slider from 'infinite-react-carousel';
 import {cards} from "../dummyData.js"
-import ProductCard from './ProductCard.jsx';
+// import ProductCard from './ProductCard.jsx';
 const ProductSlider = ({children,slidesToShow,arrowsScroll,dotsScroll}) => {
   return (
     <>
